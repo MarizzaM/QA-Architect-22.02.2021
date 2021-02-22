@@ -56,5 +56,15 @@ public class CalculatorTest {
 
         assertEquals(expected_result, actual_result);
     }
+    
+    @Test
+    public void test_div_by_zero_small_numbers() {
+
+        Calculator calculator = new Calculator();
+        
+        double actual_result = calculator.div(4, 0);
+
+        assertEquals(true, Double.isInfinite(actual_result), "Divide by zero");
+    }
 
 }
