@@ -10,11 +10,11 @@ public class Main {
 
         MobilePhone [] mobilePhones = new MobilePhone[] {android, iphone,lumia};
 
-        mysteryPhon(android);
+        mysteryPhone(android);
 
     }
 
-    private static void mysteryPhon(MobilePhone m)
+    private static void mysteryPhone(MobilePhone m)
     {
 
         System.out.println(m);
@@ -33,16 +33,19 @@ public class Main {
             System.out.println(m_as_Android.getAndroidOs());
         }
 
-        if (m instanceof Iphone)
+        else if (m instanceof Iphone)
         {
             Iphone m_as_Iphone = (Iphone)m;
             System.out.println(m_as_Iphone.getIphoneOs());
         }
 
-        if (m instanceof Lumia)
+        else if (m instanceof Lumia)
         {
             Lumia m_as_Lumia = (Lumia)m;
             System.out.println(m_as_Lumia.getMsOs());
+        }
+        else {
+            throw new ClassCastException("Error...");
         }
     }
 }
