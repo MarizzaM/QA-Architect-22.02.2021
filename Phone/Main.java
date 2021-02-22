@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Android android = new Android();
-        Iphone iphone = new Iphone();
-        Lumia lumia = new Lumia();
+        Android android = new Android("black",4.1f,10f);
+        Iphone iphone = new Iphone("white", 5.2f, 15f);
+        Lumia lumia = new Lumia("gray", 6.2f, 3);
 
         MobilePhone [] mobilePhones = new MobilePhone[] {android, iphone,lumia};
 
